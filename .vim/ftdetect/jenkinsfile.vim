@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *Jenkinsfile            set filetype=jenkinsfile
+au BufRead,BufNewFile *Jenkinsfile set filetype=jenkinsfile
