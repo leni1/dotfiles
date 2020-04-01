@@ -23,16 +23,15 @@ set wildmenu
 set termguicolors
 set conceallevel=0
 set clipboard^=unnamedplus 
+set foldmethod=indent
 
 colorscheme apprentice
 
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
-let g:markdown_syntax_conceal = 0
-let g:markdown_minlines = 100
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 call plug#begin('~/.vim/plugged')
 Plug 'davidhalter/jedi-vim'
 Plug 'moby/moby' , {'rtp': '/contrib/syntax/vim/'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'vimwiki/vimwiki'
 call plug#end()
-
