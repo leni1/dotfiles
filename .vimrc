@@ -24,14 +24,29 @@ set termguicolors
 set conceallevel=0
 set clipboard^=unnamedplus 
 set foldmethod=indent
+" This is for gruvbox to look pretty (to me ;))
+" by default it is a light mode which I don't enjoy
+" remember to comment out when trying out other colors
+set bg=dark
 
 colorscheme apprentice
+" Comment the line above
+" and uncomment the line below
+" to change color scheme
+" for whatever reason, apprentice no longer looks good
+" in classic Ubuntu/Debian/Fedora terminals
+" colorscheme gruvbox
 
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
 call plug#begin('~/.vim/plugged')
 Plug 'davidhalter/jedi-vim'
-Plug 'moby/moby' , {'rtp': '/contrib/syntax/vim/'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'vimwiki/vimwiki'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'tonekk/vim-ruby-capybara'
+Plug 'tpope/vim-bundler'
+Plug 'flazz/vim-colorschemes'
+Plug 'FooSoft/vim-argwrap'
 call plug#end()
